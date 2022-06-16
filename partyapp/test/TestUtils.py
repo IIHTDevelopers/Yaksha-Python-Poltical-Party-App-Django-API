@@ -1,5 +1,5 @@
-from notesapp.test.TestResults import TestResults
-from notesapp.test.TestCaseResultDto import TestCaseResultDto
+from partyapp.test.TestResults import TestResults
+from partyapp.test.TestCaseResultDto import TestCaseResultDto
 import json
 import requests
 
