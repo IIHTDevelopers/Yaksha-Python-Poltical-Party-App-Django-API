@@ -2,32 +2,32 @@ from rest_framework.test import APITestCase
 from partyapp.models import PoliticalPartyModel,PoliticalLeaderModel,DevelopmentModel
 from partyapp.test.TestUtils import TestUtils
 class PoliticalAPIExceptionalTest(APITestCase):
-    # @classmethod
-    # def setUpTestData(cls):
-    #     PoliticalPartyModel.objects.create(
-    #     party_id= 1,
-    #     party_name= "TDP",
-    #     party_founder= "NTR")
-    #
-    #     PoliticalLeaderModel.objects.create(
-    #     leader_id= 1,
-    #     party_id=1,
-    #     candidate_name="Naidu",
-    #     state_name="Telangana"
-    #     )
-    #
-    #     DevelopmentModel.objects.create(
-    #     development_id= 1,
-    #     leader_id= 1,
-    #     development_title= "Mission Bhagiratha",
-    #     development_activity= "Free Water Supply Throughout State",
-    #     development_budget=450.00,
-    #     development_state= "TS",
-    #     development_activity_month= 11,
-    #     development_activity_year= 2015)
-    #
-    #     with open("../output_revised.txt","w") as f:
-    #         pass
+    @classmethod
+    def setUpTestData(cls):
+        PoliticalPartyModel.objects.create(
+        party_id= 1,
+        party_name= "TDP",
+        party_founder= "NTR")
+    
+        PoliticalLeaderModel.objects.create(
+        leader_id= 1,
+        party_id=1,
+        candidate_name="Naidu",
+        state_name="Telangana"
+        )
+    
+        DevelopmentModel.objects.create(
+        development_id= 1,
+        leader_id= 1,
+        development_title= "Mission Bhagiratha",
+        development_activity= "Free Water Supply Throughout State",
+        development_budget=450.00,
+        development_state= "TS",
+        development_activity_month= 11,
+        development_activity_year= 2015)
+    
+        with open("../output_revised.txt","w") as f:
+            pass
 
     def test_fetch_all_registered_political_parties_fail(self):
         test_obj = TestUtils()
