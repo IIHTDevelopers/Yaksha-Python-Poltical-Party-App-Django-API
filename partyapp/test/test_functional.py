@@ -158,7 +158,7 @@ class PoliticalAPIFunctionalTest(APITestCase):
             test_obj.yakshaAssert("TestDeletePoliticalLeader", True, "functional")
             print("TestDeletePoliticalLeader=Passed")
         else:
-            test_obj.yakshaAssert("TestDeletePoliticalLeaderd", False, "functional")
+            test_obj.yakshaAssert("TestDeletePoliticalLeader", False, "functional")
             print("TestDeletePoliticalLeader=Failed")
 
     def test_get_political_leader_by_party_id(self):
@@ -182,7 +182,7 @@ class PoliticalAPIFunctionalTest(APITestCase):
             test_obj.yakshaAssert("TestFetchAllCreatedDevelopments", True, "functional")
             print("TestFetchAllCreatedDevelopments = Passed")
         else:
-            test_obj.yakshaAssert("TestIsCandidateQualified", False, "functional")
+            test_obj.yakshaAssert("TestFetchAllCreatedDevelopments", False, "functional")
             print("TestFetchAllCreatedDevelopments = Failed")
 
     def test_get_development_by_id(self):
