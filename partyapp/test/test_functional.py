@@ -59,11 +59,11 @@ class PoliticalAPIFunctionalTest(APITestCase):
         }
         response=self.client.post(url,data,format='json')
         if response.status_code==201:
-            test_obj.yakshaAssert("TestGetPoliticalPartyById", True, "functional")
-            print("TestGetPoliticalPartyById=Passed")
+            test_obj.yakshaAssert("TestRegisterPoliticalParty", True, "functional")
+            print("TestRegisterPoliticalParty=Passed")
         else:
-            test_obj.yakshaAssert("TestGetPoliticalPartyById", False, "functional")
-            print("TestGetPoliticalPartyById=Failed")
+            test_obj.yakshaAssert("TestRegisterPoliticalParty", False, "functional")
+            print("TestRegisterPoliticalParty=Failed")
 
     def test_update_political_party(self):
         test_obj = TestUtils()
